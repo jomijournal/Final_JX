@@ -112,7 +112,7 @@ def ip_check(request):
                 sum_count.append(a)
                 # b = det_ax.objects.filter(ip__in=s).filter(month=y["month"]).filter(year=z["year"]).values('ip').distinct()
             if sum(sum_count) > 0:
-                newdict.append([y["month"], " ", z["year"], " => ", "/ Session IDs:  ", sum(sum_count)])
+                newdict.append([y["month"], " ", z["year"], " => ", " Session IDs:  ", sum(sum_count)])
                 # print newdict
 
         dm = {'Jan':12,'Feb':11,'Mar':10,'Apr':9,'May':8,'Jun':7,'Jul':6,'Aug':5,'Sep':4,'Oct':3,'Nov':2,'Dec':1}
