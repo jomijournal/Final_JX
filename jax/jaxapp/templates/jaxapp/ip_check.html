@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <title>Jomi Analytics</title>
+      <link href = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel = "stylesheet">
+   </head>
+   <body>
+     <div class = "container">
+         <h3>Jomi Analytics</h3>
+         <br>
+         <h5>query results - monthly unique session ID's for set of IP addresses</h5>
+
+         <br></br>
+         {%for item in sum_dict%}
+         <p>
+         {%for x in item%}
+         <span>{{x}}</span>
+         {% endfor %}
+         </p>
+         {% endfor %}
+         <br></br>
+         <p>Truncated IP Range: {{ip_array}}</p>
+     <div>
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+   </body>
+</html>

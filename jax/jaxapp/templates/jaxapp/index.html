@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <title>Jomi Analytics</title>
+      <link href = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel = "stylesheet">
+   </head>
+   <body>
+     <div class = "container">
+         <h3>Jomi Analytics</h3>
+         <br></br>
+     <body>
+       <h4>detail query</h4>
+       <form action="detail" method="post">
+         {% csrf_token %}
+         {{dropdownform.as_p}}
+       <input type="submit"  class="btn btn-primary" value="OK">
+        </form>
+        <br></br>
+        <h4>summary query</h4>
+        <form action="summary" method="post">
+          {% csrf_token %}
+          {{dropdownform.as_p}}
+        <input type="submit" class="btn btn-primary" value="OK">
+         </form>
+        </form>
+        <br></br>
+
+         <h4>IP query</h4>
+
+          <form action="ip_add" method="post">
+             {% csrf_token %}
+             {{dropdownform.as_p}}
+           <input type="submit" class="btn btn-primary" value="OK">
+
+         </form>
+         <br>
+         <br>
+         <h4>Search by IP addresses </h4>
+
+         <form action="ip_check" method="post">
+           {% csrf_token %}
+           {{anotherform.as_p}}
+          <br>
+          <p><b>NOTE:</b>  please make sure to enter in <b>ClickyAPI format</b> i.e: 216.165.126.0,216.165.126.255|216.165.127.0,216.165.126.255 </p>
+          <p>(1) no spaces, (2) the <b>comma ","</b> represents a range, (3) the <b>pipe "|" </b> represents a new IP address number or range </p>
+<br>
+          <button type="submit" class="btn btn-primary">OK</button>
+          </form>
+
+          <br>
+          <br>
+         </div>
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+   </body>
+</html>
